@@ -1,0 +1,47 @@
+.header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+height: 80px;
+  padding: 0 2rem;
+  
+  color: #000;
+ 
+}
+
+.nav-btn{
+  padding: 5px;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #000;
+  visibility: hidden;
+  opacity: 0;
+  font-size: 1.5rem;
+}
+
+@media only screen and (max-width: 1024px){
+ .nav-btn{
+    visibility: visible;
+    opacity: 1;
+  }
+.nav{
+
+    display: flex ;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color:#fff ;
+    transition: 1s;
+    transform: translateY(-100vh);
+  }
+ .responsive-nav {
+transform: none;
+  }
+  .nav-close-btn{
+position: absolute;
+top: 1rem;
+right: 0rem;
+  }
+}
