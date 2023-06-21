@@ -2,7 +2,7 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
 export const fetchProducts=createAsyncThunk('products/fetchProducts',async(_,rejectWithValue)=>{
 try{
-const {data}= await axios.get(' http://localhost:3000/products')
+const {data}= await axios.get(' https://online-shop-api-blgp.onrender.com/products')
 return data
 }catch(error){
 return  rejectWithValue(error.message)
@@ -10,7 +10,7 @@ return  rejectWithValue(error.message)
 })
 export const fetchProductsById=createAsyncThunk('products/fetchProducts',async(id,rejectWithValue)=>{
   try{
-  const {data}= await axios.get(' http://localhost:3000/products/' + id)
+  const {data}= await axios.get(' https://online-shop-api-blgp.onrender.com/products/' + id)
   return data
   }catch(error){
   return  rejectWithValue(error.message)
@@ -18,7 +18,7 @@ export const fetchProductsById=createAsyncThunk('products/fetchProducts',async(i
   })
 export const addNewProduct=createAsyncThunk('products/addNewProduct',async(newProduct,rejectWithValue)=>{
   try{
-    const {data}= await axios.post(' http://localhost:3000/products',newProduct)
+    const {data}= await axios.post(' https://online-shop-api-blgp.onrender.com/products',newProduct)
     return data
   }catch(error){
   return  rejectWithValue(error.message)

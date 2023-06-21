@@ -3,7 +3,7 @@ import axios from 'axios';
 
 export const register=createAsyncThunk('user/register',async({userData,navigate},rejectWithValue)=>{
   try{
-    const {data}= await axios.post('http://localhost:3000/users' ,userData)
+    const {data}= await axios.post('https://online-shop-api-blgp.onrender.com/users' ,userData)
 
       navigate('/login')
       return data[0]
@@ -15,7 +15,7 @@ export const register=createAsyncThunk('user/register',async({userData,navigate}
 })
 export const login=createAsyncThunk('user/login',async({userData,navigate,toast},rejectWithValue)=>{
 try{
-  const {data}= await axios.get('http://localhost:3000/users?email=' + userData.email + "&password="  + userData.password)
+  const {data}= await axios.get('https://online-shop-api-blgp.onrender.com/users?email=' + userData.email + "&password="  + userData.password)
 if(data.length >0){
   navigate('/shop')
   toast.success('You are connected')

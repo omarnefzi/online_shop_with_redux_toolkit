@@ -5,7 +5,7 @@ export const fetchBlogs = createAsyncThunk(
   "blogs/fetchBlogs",
   async (_, rejectWithValue) => {
     try {
-      const { data } = await axios.get("http://localhost:3000/blogs");
+      const { data } = await axios.get("https://online-shop-api-blgp.onrender.com/blogs");
       return data;
     } catch (error) {
       return rejectWithValue(error.message);
@@ -17,7 +17,7 @@ export const fetchBlogById = createAsyncThunk(
   "blogs/fetchBlogs",
   async (id, rejectWithValue) => {
     try {
-      const { data } = await axios.get("http://localhost:3000/blogs/" + id);
+      const { data } = await axios.get("https://online-shop-api-blgp.onrender.com/blogs/" + id);
       return data;
     } catch (error) {
       return rejectWithValue(error.message);

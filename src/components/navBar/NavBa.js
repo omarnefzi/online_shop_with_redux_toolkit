@@ -20,8 +20,8 @@ const NavBa = () => {
 
   return (
     <header className='header bg-slate-50	'>
-     <Link to='/'>
-     <h3 className='text-black'>online <span className='text-rose-500'>  Shop</span></h3>
+     <Link to='/' className='no-underline'>
+     <h3  className='text-black title  '>online <span className='text-rose-500 title  '>  Shop</span></h3>
      </Link>
       <nav ref={navRef} className='nav ml-20' >
         
